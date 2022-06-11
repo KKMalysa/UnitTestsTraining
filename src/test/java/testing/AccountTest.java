@@ -3,6 +3,7 @@ package testing;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AccountTest {
 
@@ -16,5 +17,14 @@ public class AccountTest {
         Acount newAccount = new Acount();
         assertFalse(newAccount.isActive(), "check if new account is active" );
 
+    }
+
+    @Test
+    void myTest2() {
+
+        Acount newAccount = new Acount();
+        assertFalse(newAccount.isActive());
+        newAccount.setActive(true);
+        assertTrue(newAccount.isActive());
     }
 }
