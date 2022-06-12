@@ -17,3 +17,5 @@ some of new dependencies
 lesson 4: test structure, given-when-then, name convention
 
 lesson 5: differences betwen JUnit 4 & JUnit 5, null testing, matchers - Hamcrest & assertJ, collection testing
+
+lesson 6: testing of values and objects
