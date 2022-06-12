@@ -9,3 +9,5 @@ lesson 3: two tests with different conditions, checking how they work and when t
 some of new dependencies
 
 lesson 4: test structure, given-when-then, name convention
+
+lesson 5: differences betwen JUnit 4 & JUnit 5, null testing, matchers - Hamcrest & assertJ, collection testing
