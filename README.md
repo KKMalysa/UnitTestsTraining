@@ -1,6 +1,12 @@
 # UnitTestsTraining
 Lets learn something about unit tests ;)
 
+Most of code in this repository is a recrated work of dev-foundry from their training "Testy jednostkowe - JUnit 5, Mockito 2, TDD".
+http://www.devfoundry.pl | 
+https://twitter.com/dev_foundry | 
+https://www.facebook.com/devfoundry/ |   
+https://github.com/dev-foundry
+
 lesson 1: what are they & what do they do
 
 lesson 2: @Test & asserts
