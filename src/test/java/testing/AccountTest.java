@@ -2,6 +2,8 @@ package testing;
 
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -16,12 +18,14 @@ public class AccountTest {
         Account newAccount = new Account();
 
         //then
-        assertFalse(newAccount.isActive());
+        assertFalse(newAccount.isActive());                               // this lines
+        assertThat(newAccount.isActive(), equalTo(false));       // means the same
+        assertThat(newAccount.isActive(), is(false));              // in three ways
 
     }
 
     @Test
-    void accountShouldtBeActiveAfterActivation() {
+    void accountShouldBeActiveAfterActivation() {
         //given
         Account newAccount = new Account();
 
@@ -29,7 +33,8 @@ public class AccountTest {
         newAccount.setActive(true);
 
         //then
-        assertTrue(newAccount.isActive());
+        assertTrue(newAccount.isActive());                           // that two lines
+        assertThat(newAccount.isActive(), equalTo(true));   // mean the same
     }
 
     /**
@@ -45,8 +50,12 @@ public class AccountTest {
 
         //then
         assertNull(address); //siriously Sherlock? :D
+        assertThat(address, equalTo(null));
+        assertThat(address, nullValue());
+        assertThat(address, is(nullValue()));
 
 //        assertNotNull(address); // 2nd point for Sherlock!
+//        assertThat(address, notNullValue());
 
     }
 
@@ -54,7 +63,7 @@ public class AccountTest {
     void defaultDeliveryAddressShouldNotBeNullAfterBeingSet() {
 
         //given
-        Address address = new Address("Sharick Straße", "102"); 
+        Address address = new Address("Sharick Straße", "102");
         Account account = new Account();
         account.setDefaultDeliveryAddress(address); //now there should be a not null address
 

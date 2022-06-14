@@ -2,6 +2,8 @@ package testing;
 
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MealTest {
@@ -16,7 +18,8 @@ class MealTest {
         int discountedPrice = meal.getDiscountedPrice(35);
 
         //then
-        assertEquals(65, discountedPrice);
+        assertEquals(65, discountedPrice);          // this is an example of difference between
+        assertThat(discountedPrice, equalTo(65));   // properties in assertEquals & assertThat
     }
 
     @Test //referential comparison
@@ -30,6 +33,7 @@ class MealTest {
         //then
         assertSame(meal,meal2); // this should pass
 //        assertSame(meal,meal3); // this should not pass
+        assertThat(meal, is(sameInstance(meal2)));  // need a comment?
 
     }
     @Test
